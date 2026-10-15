@@ -3,14 +3,35 @@
 ## Подготовка
 
 * Вам потребуется ОС Linux / MacOS
-* Установить semgrep с помощью команды `snap install semgrep` (если ОС Linux)
+* Установить semgrep с помощью команды `snap install semgrep` или `brew install semgrep`
 * Скачать правила semgrep с официального репозитория [semgrep-rules](https://github.com/semgrep/semgrep-rules/tree/develop/python)
 
 ## Задание
 
 Провести анализ кода через semgrep
 
-В конце ожидается составленная таблица по результатам semgrep
+Запуск осуществляется через команду следующий скрипт:
+ 
+```
+#!/bin/bash
+set -e
+
+mkdir -p semgrep-rules-yaml
+
+find semgrep-rules -type f \( -name "*.yaml" -o -name "*.yml" \) \
+    -exec cp --parents {} semgrep-rules-yaml/ \;
+
+semgrep --config semgrep-rules-yaml/ \
+        --json \
+        --output=semgrep-report.json \
+        main.py
+```
+
+В конце ожидается составленная таблица по результатам semgrep с приведенными выводами
+
+[!] Можно воспользоваться ИИ
+
+<img width="1395" height="648" alt="image" src="https://github.com/user-attachments/assets/df3c7660-3e0d-4d89-a72c-da5720a1f702" />
 
 ## О коде
 
