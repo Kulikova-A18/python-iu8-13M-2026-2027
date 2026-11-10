@@ -177,7 +177,6 @@ sequenceDiagram
 | `fraud.detected` | `fraud_control` | `admin`, `notifications` | `user_id`, `operation`, `reason` |
 | `operation.reversed` | `reports` / `admin` | `accounts`, `notifications` | `operation_id`, `reason` |
 
----
 
 ## Обязательный функционал
 
@@ -272,6 +271,9 @@ bank-system/
 ```
 ## Полезные ссылки
 
+- [Модульное программирование: принципы, выгоды и реализация в коде](https://sky.pro/wiki/javascript/modulnoe-programmirovanie-osnovy-preimushestva-primery/)
+- [Модульное программирование в Python: структурирование кода правильно]([https://sky.pro/wiki/javascript/modulnoe-programmirovanie-osnovy-preimushestva-primery/](https://sky.pro/wiki/media/kak-sozdat-i-ispolzovat-sobstvennye-moduli-v-python/?ysclid=mwaje3875382771513))
+- [Python модули и пакеты](https://habr.com/ru/articles/718828/)
 - [importlib.metadata — entry points](https://docs.python.org/3/library/importlib.metadata.html#entry-points)
 - [typing.Protocol](https://docs.python.org/3/library/typing.html#typing.Protocol)
 - [import-linter](https://import-linter.readthedocs.io/)
